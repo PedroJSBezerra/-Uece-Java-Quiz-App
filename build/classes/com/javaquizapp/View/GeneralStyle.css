@@ -1,0 +1,79 @@
+*{
+    -myGradient: linear-gradient(to right bottom,#50D5B7,#067D68);
+    -myTextFill: #f6f6f6;
+    -myNavColor: #067D68;
+    -myButtonColor: #EEBD89;
+}
+.root{
+    -fx-background-color: -myGradient;
+}
+/*=======TOP SECTION*=========*/
+.borderpane{
+    -fx-max-width: 360;
+    -fx-min-height: 640;
+}
+.topHbox{
+    -fx-alignment: center;
+}
+.topLabel{
+    -fx-font-size: 30;
+    -fx-alignment: center;
+    -fx-text-fill: -myTextFill;
+}
+/*=======CENTER SECTION*=========*/
+.centerVbox{
+    -fx-alignment: bottom_center;
+    -fx-padding: 80 10 10 10;
+}
+.centerTextFlow{
+    -fx-line-spacing: 10;
+}
+.centerTextFlowText{
+    -fx-fill: #f6f6f6;
+    -fx-font-size: 16;
+}
+.centerHbox{
+    -fx-padding: 30;
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}
+.centerHboxText{
+    -fx-text-fill: -myTextFill;
+    -fx-font-size: 20;
+}
+.textField{
+    -fx-background-color: transparent;
+    -fx-border-color: -myTextFill;
+    -fx-border-radius: 20;
+    -fx-alignment: center;
+    -fx-text-fill: -myTextFill;
+    -fx-prompt-text-fill: -myTextFill;
+}
+.radio{
+    -fx-text-fill: -myTextFill;
+    -fx-font-size: 20;
+}
+.hBoxRadioGroup{
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+/*=======BOTTOM SECTION*=========*/
+.bottomHbox{
+    -fx-background-color: -myNavColor;
+    -fx-background-radius: 20 20 0 0;
+    -fx-spacing: 16;
+    -fx-padding: 16;
+    -fx-alignment: center;
+    -fx-width: max_width;
+}
+.buttonNav{
+    -fx-grow: always;
+    -fx-max-width: Infinity;
+    -fx-max-height: Infinity;
+    -fx-background-radius: 10;
+    -fx-background-color: -myButtonColor;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: -myTextFill;
+    -fx-alignment: center;
+}

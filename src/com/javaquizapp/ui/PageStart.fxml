@@ -38,8 +38,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#logout" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonNext" mnemonicParsing="false" onAction="#switchToPageRegister" styleClass="buttonNav" text="Proximo" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRegister" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Proximo" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>

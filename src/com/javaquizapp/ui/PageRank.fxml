@@ -20,8 +20,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonRestart" mnemonicParsing="false" onAction="#switchToPageRegister" styleClass="buttonNav" text="Jogar Novamente" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonCredits" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToPageCredits" styleClass="buttonNav" text="Creditos" />
+                  <Button fx:id="buttonRestart" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Jogar Novamente" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonCredits" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Creditos" />
                </children>
             </HBox>
          </bottom>

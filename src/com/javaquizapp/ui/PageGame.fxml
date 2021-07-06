@@ -20,7 +20,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonCheckAnswer" mnemonicParsing="false" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRank" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Rank" />
                </children>
             </HBox>
          </bottom>

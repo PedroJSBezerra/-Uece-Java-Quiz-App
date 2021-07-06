@@ -42,57 +42,60 @@ public class MainController implements Initializable {
         AudioClip stranger = new AudioClip(getClass().getResource("SoundStranger.mp3").toExternalForm());
         stranger.play();
     }
-    @FXML   //action for logout button
-    public void logout(ActionEvent event){
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("Seus dados não foram salvos!");
-        alert.setContentText("Deseja sair agora?");
-        if(alert.showAndWait().get() == ButtonType.OK){
-            stage = (Stage) anchorPane.getScene().getWindow();
-            System.out.println("You successfully logged out!");
-            stage.close();
+    
+    private void showScreen(ActionEvent event){
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void navigationHandler(ActionEvent event) throws IOException{
+        try{
+            boolean flagLogout = false;
+        
+            String dados = ((Button)event.getSource()).getId();
+
+            switch(dados){ 
+                default:
+                case "buttonStart":
+                    root = FXMLLoader.load(getClass().getResource("PageStart.fxml"));
+                    break;
+                case "buttonRestart":
+                case "buttonRegister":
+                    root = FXMLLoader.load(getClass().getResource("PageRegister.fxml"));
+                    break;
+
+                case "buttonGameStart":
+                    root = FXMLLoader.load(getClass().getResource("PageGame.fxml"));
+                    break;
+                case "buttonRank":
+                    root = FXMLLoader.load(getClass().getResource("PageRank.fxml"));
+                    break;
+                case "buttonCredits":
+                    root = FXMLLoader.load(getClass().getResource("PageCredits.fxml"));
+                    break;
+                case "buttonLogout":
+                Alert alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Logout");
+                alert.setHeaderText("Seus dados não foram salvos!");
+                alert.setContentText("Deseja sair agora?");
+                
+                if(alert.showAndWait().get() == ButtonType.OK){
+                    stage = (Stage) anchorPane.getScene().getWindow();
+                    System.out.println("You successfully logged out!");
+                    stage.close();
+                    flagLogout = true;
+                }
+                break;
+            }
+            //get and test Id of button
+            if(!flagLogout){
+                showScreen(event);
+            }
+        }catch(NullPointerException e){
+            System.out.println("Falha!");
         }
     }
-    @FXML //switch Scenes
-    private void switchToPageStart(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("PageStart.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    private void switchToPageRegister(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("PageRegister.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    private void switchToPageGame(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("PageGame.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    private void switchToPageRank(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("PageRank.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
-    private void switchToPageCredits(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("PageCredits.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    
 }

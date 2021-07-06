@@ -20,8 +20,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#switchToPageRank" styleClass="buttonNav" text="Ranking" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonExit" mnemonicParsing="false" onAction="#logout" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Ranking" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>

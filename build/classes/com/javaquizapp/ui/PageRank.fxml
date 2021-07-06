@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.MainController">
+   <children>
+      <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox styleClass="topHbox">
+               <children>
+                  <Label styleClass="topLabel" text="Ranking" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox styleClass="bottomHbox">
+               <children>
+                  <Button fx:id="buttonRestart" mnemonicParsing="false" onAction="#switchToPageRegister" styleClass="buttonNav" text="Jogar Novamente" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonCredits" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToPageCredits" styleClass="buttonNav" text="Creditos" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox minWidth="360.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

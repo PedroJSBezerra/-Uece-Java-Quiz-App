@@ -1,4 +1,4 @@
-package com.javaquizapp.View;
+package com.javaquizapp.ui;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -13,7 +13,7 @@ public class Main extends Application {
     //First load StartPage aplication
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("StartPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PageStart.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Java Quiz App");
         stage.setScene(scene);

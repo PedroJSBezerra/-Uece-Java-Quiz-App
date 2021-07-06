@@ -8,8 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="JavaQuizApp.jar" size="396797" download="eager" />
+    <jar href="JavaQuizApp.jar" size="398908" download="eager" />
   </resources>
-  <jfx:javafx-desc  width="800" height="600" main-class="com.javaquizapp.View.Main"  name="JavaQuizApp" />
+  <jfx:javafx-desc  width="800" height="600" main-class="com.javaquizapp.ui.Main"  name="JavaQuizApp" />
   <update check="always"/>
 </jnlp>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.MainController">
+   <children>
+      <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox styleClass="topHbox">
+               <children>
+                  <Label styleClass="topLabel" text="Cadastro" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox styleClass="bottomHbox">
+               <children>
+                  <Button fx:id="buttonPrevious" mnemonicParsing="false" onAction="#switchToPageStart" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonStart" mnemonicParsing="false" onAction="#switchToPageGame" styleClass="buttonNav" text="Começar" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox minWidth="360.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox styleClass="centerHbox" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="centerHboxText" text="Qual seu nome?" />
+                        <TextField promptText="Digite seu nome aqui" styleClass="textField">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox styleClass="hBoxRadioGroup" VBox.vgrow="ALWAYS">
+                     <children>
+                        <RadioButton mnemonicParsing="false" styleClass="radio" text="Atualidades">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupCategory" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbStrangerThings" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#strangerThings" styleClass="radio" text="Fatos desconhecidos" toggleGroup="$groupCategory" />
+                        <RadioButton layoutX="10.0" layoutY="27.0" mnemonicParsing="false" styleClass="radio" text="Geografia" toggleGroup="$groupCategory" />
+                        <RadioButton layoutX="10.0" layoutY="44.0" mnemonicParsing="false" styleClass="radio" text="Java Programing Language" toggleGroup="$groupCategory" />
+                        <RadioButton layoutX="10.0" layoutY="61.0" mnemonicParsing="false" styleClass="radio" text="Trânsito" toggleGroup="$groupCategory" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

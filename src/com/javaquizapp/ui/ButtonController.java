@@ -31,21 +31,8 @@ public class ButtonController {
         stage.setScene(scene);
         stage.show();
     }
-    
-    private void logout() {
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("Seus dados não foram salvos!");
-        alert.setContentText("Deseja sair agora?");
 
-        if(alert.showAndWait().get() == ButtonType.OK){
-            stage = (Stage) anchorPane.getScene().getWindow();
-            System.out.println("You successfully logged out!");
-            stage.close();
-        }
-    }
-    
-    void navigation(ActionEvent event) throws IOException{
+    void navigation(ActionEvent event) throws IOException {
         String dados = ((Button)event.getSource()).getId();
         switch(dados){ 
             default:
@@ -66,7 +53,16 @@ public class ButtonController {
                 showScreen(event,"PageCredits.fxml");
                 break;
             case "buttonLogout":
-                logout();
+                Alert alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Logout");
+                alert.setHeaderText("Seus dados não foram salvos!");
+                alert.setContentText("Deseja sair agora?");
+
+                if(alert.showAndWait().get() == ButtonType.OK){
+                    stage = (Stage) anchorPane.getScene().getWindow();
+                    System.out.println("You successfully logged out!");
+                    stage.close();
+                }
             break;
         }
     }

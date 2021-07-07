@@ -30,8 +30,8 @@ public class MainController implements Initializable {
     //=========================== N A V I G A T I O N ============================
     @FXML
     public void navigationHandler(ActionEvent event) throws IOException{
-        ButtonController controller = new ButtonController();
-        controller.navigation(event);
+        ButtonController btn = new ButtonController();
+        btn.navigation(event);
     }
     /*
     @FXML

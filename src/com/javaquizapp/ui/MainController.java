@@ -20,82 +20,77 @@ import javafx.stage.Stage;
 
 //FXML Controller class
 public class MainController implements Initializable {
-
+    //=========================== S O U N D S ============================
     @FXML
-    private AnchorPane anchorPane;
-    @FXML
-    private Button buttonLogout;
-    @FXML
-    private Button buttonNext;
-    
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-     
-    @Override   //Initializes the controller class.
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
-    
-    @FXML   //button sound
     public void strangerThings(ActionEvent event){
         AudioClip stranger = new AudioClip(getClass().getResource("SoundStranger.mp3").toExternalForm());
         stranger.play();
     }
     
-    private void showScreen(ActionEvent event){
+    //=========================== N A V I G A T I O N ============================
+    @FXML
+    public void navigationHandler(ActionEvent event) throws IOException{
+        ButtonController controller = new ButtonController();
+        controller.navigation(event);
+    }
+    /*
+    @FXML
+    private AnchorPane anchorPane;
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    
+    @FXML
+    private void navigationHandler(ActionEvent event) throws IOException{
+
+        String dados = ((Button)event.getSource()).getId();
+
+        switch(dados){ 
+            default:
+            case "buttonStart":
+                showScreen(event,"PageStart.fxml");
+                break;
+            case "buttonRestart":
+            case "buttonRegister":
+                showScreen(event,"PageRegister.fxml");
+                break;
+
+            case "buttonGameStart":
+                showScreen(event,"PageGame.fxml");
+                break;
+            case "buttonRank":
+                showScreen(event,"PageRank.fxml");
+                break;
+            case "buttonCredits":
+                showScreen(event,"PageCredits.fxml");
+                break;
+            case "buttonLogout":
+                Alert alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Logout");
+                alert.setHeaderText("Seus dados não foram salvos!");
+                alert.setContentText("Deseja sair agora?");
+
+            if(alert.showAndWait().get() == ButtonType.OK){
+                stage = (Stage) anchorPane.getScene().getWindow();
+                System.out.println("You successfully logged out!");
+                stage.close();
+            }
+            break;
+        }
+    }
+    
+    private void showScreen(ActionEvent event,String dados) throws IOException{
+        root = FXMLLoader.load(getClass().getResource(dados));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    private void navigationHandler(ActionEvent event) throws IOException{
-        try{
-            boolean flagLogout = false;
-        
-            String dados = ((Button)event.getSource()).getId();
-
-            switch(dados){ 
-                default:
-                case "buttonStart":
-                    root = FXMLLoader.load(getClass().getResource("PageStart.fxml"));
-                    break;
-                case "buttonRestart":
-                case "buttonRegister":
-                    root = FXMLLoader.load(getClass().getResource("PageRegister.fxml"));
-                    break;
-
-                case "buttonGameStart":
-                    root = FXMLLoader.load(getClass().getResource("PageGame.fxml"));
-                    break;
-                case "buttonRank":
-                    root = FXMLLoader.load(getClass().getResource("PageRank.fxml"));
-                    break;
-                case "buttonCredits":
-                    root = FXMLLoader.load(getClass().getResource("PageCredits.fxml"));
-                    break;
-                case "buttonLogout":
-                Alert alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Logout");
-                alert.setHeaderText("Seus dados não foram salvos!");
-                alert.setContentText("Deseja sair agora?");
-                
-                if(alert.showAndWait().get() == ButtonType.OK){
-                    stage = (Stage) anchorPane.getScene().getWindow();
-                    System.out.println("You successfully logged out!");
-                    stage.close();
-                    flagLogout = true;
-                }
-                break;
-            }
-            //get and test Id of button
-            if(!flagLogout){
-                showScreen(event);
-            }
-        }catch(NullPointerException e){
-            System.out.println("Falha!");
-        }
+    */
+    //=========================== E N D ============================
+    @Override   
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
 }

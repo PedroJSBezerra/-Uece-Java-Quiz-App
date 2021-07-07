@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.ControllerMain">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -49,7 +49,7 @@
                               <ToggleGroup fx:id="groupCategory" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="rbStrangerThings" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#strangerThings" styleClass="radio" text="Fatos desconhecidos" toggleGroup="$groupCategory" />
+                        <RadioButton fx:id="rbStrangerThings" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eventHandler" styleClass="radio" text="Fatos desconhecidos" toggleGroup="$groupCategory" />
                         <RadioButton layoutX="10.0" layoutY="27.0" mnemonicParsing="false" styleClass="radio" text="Geografia" toggleGroup="$groupCategory" />
                         <RadioButton layoutX="10.0" layoutY="44.0" mnemonicParsing="false" styleClass="radio" text="Java Programing Language" toggleGroup="$groupCategory" />
                         <RadioButton layoutX="10.0" layoutY="61.0" mnemonicParsing="false" styleClass="radio" text="Trânsito" toggleGroup="$groupCategory" />

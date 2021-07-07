@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.MainController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -46,8 +46,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button mnemonicParsing="false" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonRank" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Rank" />
+                  <Button mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRank" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Rank" />
                </children>
             </HBox>
          </bottom>
@@ -75,10 +75,10 @@
                   </VBox>
                   <FlowPane alignment="CENTER" hgap="5.0" vgap="5.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option1" />
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option2" />
-                        <Button layoutX="163.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option3" />
-                        <Button layoutX="10.0" layoutY="168.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option4" />
+                        <Button fx:id="option1" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option1" />
+                        <Button fx:id="option2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option2" />
+                        <Button fx:id="option3" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option3" />
+                        <Button fx:id="option4" layoutX="10.0" layoutY="168.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option4" />
                      </children>
                   </FlowPane>
                </children>

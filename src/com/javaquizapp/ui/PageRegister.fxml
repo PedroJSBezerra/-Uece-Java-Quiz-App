@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.MainController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -24,8 +24,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonStart" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonGameStart" mnemonicParsing="false" onAction="#navigationHandler" styleClass="buttonNav" text="Começar" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonStart" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonGameStart" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Começar" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>

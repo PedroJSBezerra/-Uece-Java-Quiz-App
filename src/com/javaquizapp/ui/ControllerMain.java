@@ -18,7 +18,7 @@ public class ControllerMain implements Initializable {
         stranger.play();
     }
     
-    //=========================== E V E N T  H A N D L E R ============================
+    //=========================== E V E N T  H A N D L E R =================
     public void eventHandler(ActionEvent event) throws IOException{
     ControllerNavigation nav = new ControllerNavigation();
         nav.navigation(event);

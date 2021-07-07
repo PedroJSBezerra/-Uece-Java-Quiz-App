@@ -29,12 +29,6 @@ public class MainController implements Initializable {
     
     //=========================== N A V I G A T I O N ============================
     @FXML
-    public void navigationHandler(ActionEvent event) throws IOException{
-        ButtonController btn = new ButtonController();
-        btn.navigation(event);
-    }
-    /*
-    @FXML
     private AnchorPane anchorPane;
     
     private Stage stage;
@@ -66,16 +60,7 @@ public class MainController implements Initializable {
                 showScreen(event,"PageCredits.fxml");
                 break;
             case "buttonLogout":
-                Alert alert = new Alert(AlertType.CONFIRMATION);
-                alert.setTitle("Logout");
-                alert.setHeaderText("Seus dados não foram salvos!");
-                alert.setContentText("Deseja sair agora?");
-
-            if(alert.showAndWait().get() == ButtonType.OK){
-                stage = (Stage) anchorPane.getScene().getWindow();
-                System.out.println("You successfully logged out!");
-                stage.close();
-            }
+                exitScreen();
             break;
         }
     }
@@ -87,7 +72,18 @@ public class MainController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    */
+    private void exitScreen(){   
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("Seus dados não foram salvos!");
+        alert.setContentText("Deseja sair agora?");
+
+        if(alert.showAndWait().get() == ButtonType.OK){
+            stage = (Stage) anchorPane.getScene().getWindow();
+            System.out.println("You successfully logged out!");
+            stage.close();
+        }
+    }
     //=========================== E N D ============================
     @Override   
     public void initialize(URL url, ResourceBundle rb) {

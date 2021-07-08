@@ -10,10 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControllerNavigation {
     @FXML
+    TextField textName;
     
     private Stage stage;
     private Scene scene;
@@ -67,9 +69,8 @@ public class ControllerNavigation {
             stage.close();
         }
     }
-
     private void playerRegister(ActionEvent event) {
-        String name = "Alicia";
+        String name = textName.getText();
         String category = "news";
         System.out.println("O nome do jogador é: "+name+"\n"+"A categoria escolhida foi:"+category);
     }

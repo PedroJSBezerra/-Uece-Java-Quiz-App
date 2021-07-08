@@ -12,51 +12,39 @@
     -fx-min-height: 640;
 }
 /*=======TOP SECTION*=========*/
-.topHbox{
-    -fx-alignment: center;
-}
-.topLabel{
-    -fx-font-size: 30;
-    -fx-alignment: center;
-    -fx-text-fill: -myTextFill;
-}
-/*=======CENTER SECTION*=========*/
-.centerVbox{
-    -fx-alignment: bottom_center;
-    -fx-padding: 80 10 10 10;
-}
-.centerTextFlow{
-    -fx-line-spacing: 10;
-}
-.centerTextFlowText{
-    -fx-fill: #f6f6f6;
-    -fx-font-size: 16;
-}
-.centerHbox{
-    -fx-padding: 30;
-    -fx-alignment: center;
+.playerStatus{
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: -myNavColor;
+    -fx-padding: 10;
     -fx-spacing: 20;
 }
-.centerHboxText{
+.statusHead{
+    -fx-font-weight: bold;
     -fx-text-fill: -myTextFill;
-    -fx-font-size: 20;
+    -fx-font-size: 16;
 }
-.textField{
-    -fx-background-color: transparent;
-    -fx-border-color: -myTextFill;
-    -fx-border-radius: 20;
+.scoreField{
+    -fx-background-color: -myTextFill;
+    -fx-background-radius: 20;
     -fx-alignment: center;
-    -fx-text-fill: -myTextFill;
-    -fx-prompt-text-fill: -myTextFill;
-}
-.radio{
-    -fx-text-fill: -myTextFill;
-    -fx-font-size: 20;
-}
-.hBoxRadioGroup{
-    -fx-padding: 20;
     -fx-spacing: 10;
 }
+.lifeField{
+    -fx-background-color: -myTextFill;
+    -fx-background-radius: 20;
+    -fx-alignment: center;
+}
+.lblName{
+    -fx-font-size: 20;
+}
+.lblScore{
+    -fx-font-size: 20;
+}
+.lblLife{
+    -fx-font-size: 20;
+}
+/*=======CENTER SECTION*=========*/
+
 /*=======BOTTOM SECTION*=========*/
 .bottomHbox{
     -fx-background-color: -myNavColor;

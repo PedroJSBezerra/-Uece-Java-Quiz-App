@@ -36,7 +36,8 @@ public class ControllerNavigation {
                 break;
 
             case "buttonGameStart":
-                playerRegister(event);
+                String playerName = textName.getText();
+                System.out.println(playerName);
                 showScreen(event,"PageGame.fxml");
                 break;
             case "buttonRank":
@@ -68,10 +69,5 @@ public class ControllerNavigation {
             System.out.println("You successfully logged out!");
             stage.close();
         }
-    }
-    private void playerRegister(ActionEvent event) {
-        String name = textName.getText();
-        String category = "news";
-        System.out.println("O nome do jogador é: "+name+"\n"+"A categoria escolhida foi:"+category);
     }
 }

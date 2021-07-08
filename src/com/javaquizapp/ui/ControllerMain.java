@@ -6,10 +6,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
 
 //FXML Controller class
 public class ControllerMain implements Initializable {
+
     //==================== S O U N D S ============================
     @FXML
     public void strangerThings(ActionEvent event){
@@ -20,6 +26,7 @@ public class ControllerMain implements Initializable {
     }
     
     //=============== E V E N T  H A N D L E R =================
+    @FXML
     public void eventHandler(ActionEvent event) throws IOException{
     ControllerNavigation nav = new ControllerNavigation();
         nav.navigation(event);

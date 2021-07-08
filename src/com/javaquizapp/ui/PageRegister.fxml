@@ -35,7 +35,7 @@
                   <VBox styleClass="centerHbox" VBox.vgrow="ALWAYS">
                      <children>
                         <Label styleClass="centerHboxText" text="Qual seu nome?" />
-                        <TextField promptText="Digite seu nome aqui" styleClass="textField">
+                        <TextField fx:id="textName" promptText="Digite seu nome aqui" styleClass="textField">
                            <font>
                               <Font size="16.0" />
                            </font>

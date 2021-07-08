@@ -14,6 +14,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
@@ -23,14 +26,20 @@ public class MainController implements Initializable {
 
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    private Button buttonLogout;
-    @FXML
-    private Button buttonNext;
     
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+    private Button buttonPrevious;
+    @FXML
+    private Button buttonStart;
+    @FXML
+    private ToggleGroup groupCategory;
+    @FXML
+    private RadioButton rbStrangerThings;
+    @FXML
+    private TextField textName;
      
     @Override   //Initializes the controller class.
     public void initialize(URL url, ResourceBundle rb) {
@@ -42,8 +51,7 @@ public class MainController implements Initializable {
         AudioClip stranger = new AudioClip(getClass().getResource("SoundStranger.mp3").toExternalForm());
         stranger.play();
     }
-    @FXML   //action for logout button
-    public void logout(ActionEvent event){
+        public void logout(ActionEvent event){
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("Seus dados não foram salvos!");
@@ -72,6 +80,9 @@ public class MainController implements Initializable {
     }
     @FXML
     private void switchToPageGame(ActionEvent event) throws IOException {
+        String playerName = textName.getText();
+        System.out.println(playerName);
+        
         root = FXMLLoader.load(getClass().getResource("PageGame.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

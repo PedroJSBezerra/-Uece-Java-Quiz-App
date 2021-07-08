@@ -24,7 +24,7 @@
                         <Label styleClass="statusHead" text="Score" />
                         <HBox prefHeight="30.0" prefWidth="200.0" styleClass="scoreField">
                            <children>
-                              <Label id="lblName" styleClass="lblName" text="Jasmine" />
+                              <Label id="lblName" fx:id="playerName" styleClass="lblName" text="Jasmine" />
                               <Label id="lblScore" layoutX="73.0" layoutY="17.0" styleClass="lblScore" text="5" />
                            </children>
                         </HBox>

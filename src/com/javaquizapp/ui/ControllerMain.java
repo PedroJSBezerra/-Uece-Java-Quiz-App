@@ -13,6 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
@@ -21,7 +23,6 @@ import javafx.stage.Stage;
 public class ControllerMain implements Initializable {
 
     //==================== S O U N D S ============================
-    @FXML
     public void strangerThings(ActionEvent event){
         String audio = getClass().getResource("SoundStranger.mp3").toExternalForm();
         AudioClip stranger = new AudioClip(audio);
@@ -32,6 +33,10 @@ public class ControllerMain implements Initializable {
     //=============== E V E N T  H A N D L E R =================
     @FXML
     TextField textName;
+    @FXML
+    RadioButton news;
+    @FXML
+    Label playerName;
     
     @FXML
     public void eventHandler(ActionEvent event) throws IOException{
@@ -47,11 +52,9 @@ public class ControllerMain implements Initializable {
                 showScreen(event,"PageRegister.fxml");
                 break;
             case "buttonGameStart":
-                String playerName = textName.getText();
-                playerData(playerName);
+                //playerName.setText() = textName.getText();
                 showScreen(event,"PageGame.fxml");
                 break;
-
             case "buttonRank":
                 showScreen(event,"PageRank.fxml");
                 break;
@@ -70,9 +73,11 @@ public class ControllerMain implements Initializable {
     private Scene scene;
     private Parent root;
     
-    public void showScreen(ActionEvent event,String dados) throws IOException{
-        root = FXMLLoader.load(getClass().getResource(dados));
+    public void showScreen(ActionEvent event,String page) throws IOException{
+        
+        root = FXMLLoader.load(getClass().getResource(page));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -90,15 +95,9 @@ public class ControllerMain implements Initializable {
             stage.close();
         }
     }
-    private void playerData(String playerName) {
-        System.out.println("Player name: "+"\n"+playerName);
-    }
-    
     //==================== E N D ============================
     @Override   
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
-
 }

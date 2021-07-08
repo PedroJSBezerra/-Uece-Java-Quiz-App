@@ -10,21 +10,22 @@ import javafx.scene.media.AudioClip;
 
 //FXML Controller class
 public class ControllerMain implements Initializable {
-    //=========================== S O U N D S ============================
+    //==================== S O U N D S ============================
     @FXML
     public void strangerThings(ActionEvent event){
         String audio = getClass().getResource("SoundStranger.mp3").toExternalForm();
         AudioClip stranger = new AudioClip(audio);
+        stranger.stop();
         stranger.play();
     }
     
-    //=========================== E V E N T  H A N D L E R =================
+    //=============== E V E N T  H A N D L E R =================
     public void eventHandler(ActionEvent event) throws IOException{
     ControllerNavigation nav = new ControllerNavigation();
         nav.navigation(event);
     }
     
-    //=========================== E N D ============================
+    //==================== E N D ============================
     @Override   
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

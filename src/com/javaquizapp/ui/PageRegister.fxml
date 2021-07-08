@@ -35,7 +35,7 @@
                   <VBox styleClass="centerHbox" VBox.vgrow="ALWAYS">
                      <children>
                         <Label styleClass="centerHboxText" text="Qual seu nome?" />
-                        <TextField promptText="Digite seu nome aqui" styleClass="textField">
+                        <TextField fx:id="lblName" promptText="Digite seu nome aqui" styleClass="textField">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -44,7 +44,7 @@
                   </VBox>
                   <VBox styleClass="hBoxRadioGroup" VBox.vgrow="ALWAYS">
                      <children>
-                        <RadioButton mnemonicParsing="false" styleClass="radio" text="Atualidades">
+                        <RadioButton fx:id="rbNews" mnemonicParsing="false" styleClass="radio" text="Atualidades">
                            <toggleGroup>
                               <ToggleGroup fx:id="groupCategory" />
                            </toggleGroup>

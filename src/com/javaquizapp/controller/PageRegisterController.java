@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.javaquizapp.controller;
 
 import java.io.IOException;
@@ -23,11 +19,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author PedroJSBezerra
- */
 public class PageRegisterController implements Initializable {
     
     private Stage stage;
@@ -49,9 +40,6 @@ public class PageRegisterController implements Initializable {
     @FXML
     private RadioButton rbStrangerThings;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

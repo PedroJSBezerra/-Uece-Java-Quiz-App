@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.javaquizapp.controller;
 
 import java.io.IOException;
@@ -21,11 +16,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author PedroJSBezerra
- */
 public class PageCreditsController implements Initializable {
 
     private Stage stage;
@@ -38,10 +28,7 @@ public class PageCreditsController implements Initializable {
     private Button buttonRank;
     @FXML
     private Button buttonLogout;
-
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

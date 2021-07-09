@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.MainController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageGameController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -24,8 +24,8 @@
                         <Label styleClass="statusHead" text="Score" />
                         <HBox prefHeight="30.0" prefWidth="200.0" styleClass="scoreField">
                            <children>
-                              <Label id="lblName" fx:id="playerName" styleClass="lblName" text="Jasmine" />
-                              <Label id="lblScore" layoutX="73.0" layoutY="17.0" styleClass="lblScore" text="5" />
+                              <Label id="lblName" fx:id="lblName" styleClass="lblName" text="Jasmine" />
+                              <Label id="lblScore" fx:id="lblScore" layoutX="73.0" layoutY="17.0" styleClass="lblScore" text="5" />
                            </children>
                         </HBox>
                      </children>
@@ -35,7 +35,7 @@
                         <Label styleClass="statusHead" text="Life" />
                         <HBox prefHeight="30.0" prefWidth="200.0" styleClass="lifeField">
                            <children>
-                              <Label styleClass="lblLife" text="OOOOOOX" />
+                              <Label fx:id="lblLife" styleClass="lblLife" text="OOOOOOX" />
                            </children>
                         </HBox>
                      </children>

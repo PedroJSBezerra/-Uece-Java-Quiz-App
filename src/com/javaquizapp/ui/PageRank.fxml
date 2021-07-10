@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageRankController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -23,8 +23,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonRestart" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Jogar Novamente" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonCredits" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Creditos" />
+                  <Button fx:id="buttonRestart" mnemonicParsing="false" onAction="#switchToPageStart" styleClass="buttonNav" text="Jogar Novamente" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonCredits" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToPageCredits" styleClass="buttonNav" text="Creditos" />
                </children>
             </HBox>
          </bottom>
@@ -36,9 +36,6 @@
                       <TableColumn prefWidth="75.0" text="C1" />
                       <TableColumn prefWidth="75.0" text="C2" />
                     </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
                   </TableView>
                </children>
                <padding>

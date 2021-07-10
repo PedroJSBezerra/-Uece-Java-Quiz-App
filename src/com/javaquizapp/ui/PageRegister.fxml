@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageRegisterController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -24,8 +24,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonStart" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonGameStart" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Começar" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonStart" mnemonicParsing="false" onAction="#switchToPageStart" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonGameStart" mnemonicParsing="false" onAction="#switchToPageGame" styleClass="buttonNav" text="Começar" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>
@@ -35,7 +35,7 @@
                   <VBox styleClass="centerHbox" VBox.vgrow="ALWAYS">
                      <children>
                         <Label styleClass="centerHboxText" text="Qual seu nome?" />
-                        <TextField fx:id="textName" onAction="#eventHandler" promptText="Digite seu nome aqui" styleClass="textField">
+                        <TextField fx:id="textName" promptText="Digite seu nome aqui" styleClass="textField">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -44,7 +44,7 @@
                   </VBox>
                   <VBox styleClass="hBoxRadioGroup" VBox.vgrow="ALWAYS">
                      <children>
-                        <RadioButton fx:id="news" mnemonicParsing="false" onAction="#eventHandler" selected="true" styleClass="radio" text="Atualidades">
+                        <RadioButton fx:id="news" mnemonicParsing="false" selected="true" styleClass="radio" text="Atualidades">
                            <toggleGroup>
                               <ToggleGroup fx:id="categoryGroup" />
                            </toggleGroup>

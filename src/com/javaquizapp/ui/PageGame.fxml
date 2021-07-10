@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StylePageGame.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageGameController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -24,8 +24,8 @@
                         <Label styleClass="statusHead" text="Score" />
                         <HBox prefHeight="30.0" prefWidth="200.0" styleClass="scoreField">
                            <children>
-                              <Label id="lblName" fx:id="playerName" styleClass="lblName" text="Jasmine" />
-                              <Label id="lblScore" layoutX="73.0" layoutY="17.0" styleClass="lblScore" text="5" />
+                              <Label id="lblName" fx:id="lblName" styleClass="lblName" text="Jasmine" />
+                              <Label id="lblScore" fx:id="lblScore" layoutX="73.0" layoutY="17.0" styleClass="lblScore" text="5" />
                            </children>
                         </HBox>
                      </children>
@@ -35,7 +35,7 @@
                         <Label styleClass="statusHead" text="Life" />
                         <HBox prefHeight="30.0" prefWidth="200.0" styleClass="lifeField">
                            <children>
-                              <Label styleClass="lblLife" text="OOOOOOX" />
+                              <Label fx:id="lblLife" styleClass="lblLife" text="OOOOOOX" />
                            </children>
                         </HBox>
                      </children>
@@ -46,8 +46,7 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button mnemonicParsing="false" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonRank" layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Rank" />
+                  <Button fx:id="btnChectAnswer" mnemonicParsing="false" onAction="#checkAnswer" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>
@@ -64,7 +63,7 @@
                         <ImageView fitHeight="210.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true" />
                         <TextFlow prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Text fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui vai a pergunta voce sabe a resposta? se souber escolha a opção no botao.">
+                              <Text fx:id="textQuery" fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui vai a pergunta voce sabe a resposta? se souber escolha a opção no botao.">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

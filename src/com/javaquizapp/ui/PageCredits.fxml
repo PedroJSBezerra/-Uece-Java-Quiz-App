@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.ui.ControllerMain">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageCreditsController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -26,8 +26,8 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Ranking" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#eventHandler" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#switchToPageRank" styleClass="buttonNav" text="Ranking" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#logout" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </bottom>

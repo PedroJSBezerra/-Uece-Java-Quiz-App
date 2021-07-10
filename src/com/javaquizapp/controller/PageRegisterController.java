@@ -1,6 +1,7 @@
 
 package com.javaquizapp.controller;
 
+import com.javaquizapp.model.Player;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -56,7 +57,16 @@ public class PageRegisterController implements Initializable {
 
     @FXML
     public void switchToPageGame(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/com/javaquizapp/ui/PageGame.fxml"));
+        //root = FXMLLoader.load(getClass().getResource("/com/javaquizapp/ui/PageGame.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaquizapp/ui/PageGame.fxml"));
+        Parent root = loader.load();
+        //get the controller
+        PageGameController game = loader.getController();
+        //set data in the controller
+        Player player = new Player();
+        player.name = textName.getText();
+        game.setPlayerstatus(player.name, player.score, player.life);
+        
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

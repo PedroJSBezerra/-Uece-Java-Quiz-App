@@ -1,6 +1,5 @@
 package com.javaquizapp.controller;
 
-import com.javaquizapp.model.QueryList;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
@@ -54,7 +53,6 @@ public class PageGameController implements Initializable {
     }
     @FXML
     public void setAnswer() {
-        /*
         String list[][] = {
             {"Qual é o nome do CEO da Space-X?","Elon Reeve Musk","Elon Reeve Java", "Elon Reeve Maik", "Elon Reeve Jobs"},
             {"Qual valor da soma 1 + 1?", "2","3","6","-1"},
@@ -78,27 +76,22 @@ public class PageGameController implements Initializable {
         Collections.shuffle(strList);
         //convert to arr to use 
         strList.toArray(hintList);
-        */
-        QueryList list = new QueryList();
-        
-        textQuery.setText(list.query);
-        option1.setText(list.hint()[0]);
-        option2.setText(list.hint()[1]);
-        option3.setText(list.hint()[2]);
-        option4.setText(list.hint()[3]);
+        textQuery.setText(query);
+        option1.setText(hintList[0]);
+        option2.setText(hintList[1]);
+        option3.setText(hintList[2]);
+        option4.setText(hintList[3]);
     }
     @FXML
     private void checkAnswer(ActionEvent event) {
-        /*
-        QueryList list = new QueryList();
+        
         //return the object thet generated the event.
         Object node = event.getSource(); 
         //since the returned object is a Button you can cast it to one.
         Button option = (Button)node;
         //print clicked text of the Button
         System.out.println(option.getText());
-        System.out.println(list.answer);
-        */
+        
         setAnswer();
     }
 }

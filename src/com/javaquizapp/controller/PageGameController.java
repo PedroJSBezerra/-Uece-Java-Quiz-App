@@ -1,6 +1,5 @@
 package com.javaquizapp.controller;
 
-import com.javaquizapp.model.QueryList;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
@@ -39,66 +38,36 @@ public class PageGameController implements Initializable {
     private Button option3;
     @FXML
     private Button option4;
-
+    private String aswer;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        System.out.println("INITIALIZED");
+        setQuery();
     }
     @FXML
     public void setPlayerstatus(String name, Integer score, String life){
         lblName.setText(name);
         lblScore.setText(score.toString());
         lblLife.setText(life);
-        
-        setAnswer();
     }
+    Query query = new Query();
     @FXML
-    public void setAnswer() {
-        /*
-        String list[][] = {
-            {"Qual é o nome do CEO da Space-X?","Elon Reeve Musk","Elon Reeve Java", "Elon Reeve Maik", "Elon Reeve Jobs"},
-            {"Qual valor da soma 1 + 1?", "2","3","6","-1"},
-            {"Qual é o sistema mais ultilizado em dispositivos móveis?","Android","Apple","Symbian","iOS"},
-            {"HTML é uma linguagem de?","Marcaçâo","Programação","Ostentação","Estilização"},
-            {"A abreviação correta para Cascade Style Sheets é?", "CSS","CAS","CSY","SSC"},
-        };
-        //random query selection
-        Random rand = new Random();
-        int i = rand.nextInt(list.length);
-        //set random query index in array
-        String query = list[i][0];
-        //get asnwer index from array
-        String answer = list[i][1];
-        
-        //get list of hints in range selected
-        String hintList[] = Arrays.copyOfRange(list[i], 1,list.length); //get specif item range
-        //convert to list
-        List<String> strList = Arrays.asList(hintList);
-        //shufle hint list
-        Collections.shuffle(strList);
-        //convert to arr to use 
-        strList.toArray(hintList);
-        */
-        QueryList list = new QueryList();
-        
-        textQuery.setText(list.query);
-        option1.setText(list.hint()[0]);
-        option2.setText(list.hint()[1]);
-        option3.setText(list.hint()[2]);
-        option4.setText(list.hint()[3]);
+    public void setQuery() {
+                
+        textQuery.setText(query.list());
+        option1.setText(query.getHint()[0]);
+        option2.setText(query.getHint()[1]);
+        option3.setText(query.getHint()[2]);
+        option4.setText(query.getHint()[3]);
     }
     @FXML
     private void checkAnswer(ActionEvent event) {
-        /*
-        QueryList list = new QueryList();
         //return the object thet generated the event.
         Object node = event.getSource(); 
         //since the returned object is a Button you can cast it to one.
         Button option = (Button)node;
         //print clicked text of the Button
-        System.out.println(option.getText());
-        System.out.println(list.answer);
-        */
-        setAnswer();
+        setQuery();
     }
 }

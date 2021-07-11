@@ -46,7 +46,14 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="btnChectAnswer" mnemonicParsing="false" onAction="#checkAnswer" styleClass="buttonNav" text="Verificar Resposta" HBox.hgrow="ALWAYS" />
+                  <FlowPane alignment="CENTER" hgap="15.0" vgap="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="option1" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option1" />
+                        <Button fx:id="option2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option2" />
+                        <Button fx:id="option3" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option3" />
+                        <Button fx:id="option4" layoutX="10.0" layoutY="168.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option4" />
+                     </children>
+                  </FlowPane>
                </children>
             </HBox>
          </bottom>
@@ -63,7 +70,7 @@
                         <ImageView fitHeight="210.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true" />
                         <TextFlow prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="textQuery" fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui vai a pergunta voce sabe a resposta? se souber escolha a opção no botao.">
+                              <Text fx:id="textQuery" fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui vai a pergunta voce sabe a resposta? se souber escolha a opção no botao." wrappingWidth="320.2470703125">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -72,14 +79,6 @@
                         </TextFlow>
                      </children>
                   </VBox>
-                  <FlowPane alignment="CENTER" hgap="5.0" vgap="5.0">
-                     <children>
-                        <Button fx:id="option1" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option1" />
-                        <Button fx:id="option2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option2" />
-                        <Button fx:id="option3" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option3" />
-                        <Button fx:id="option4" layoutX="10.0" layoutY="168.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-background-radius: 5;" text="option4" />
-                     </children>
-                  </FlowPane>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="5.0" />

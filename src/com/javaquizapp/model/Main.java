@@ -1,4 +1,4 @@
-package com.javaquizapp.controller;
+package com.javaquizapp.model;
 
 import java.io.IOException;
 import javafx.application.Application;

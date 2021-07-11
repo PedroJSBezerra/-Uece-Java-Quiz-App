@@ -1,6 +1,7 @@
 package com.javaquizapp.controller;
 
 import com.javaquizapp.model.Player;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
@@ -87,7 +88,7 @@ public class PageGameController implements Initializable {
     String answer;
     
     @FXML
-    private void checkAnswer(ActionEvent event) {
+    private void checkAnswer(ActionEvent event) throws IOException {
         
         //return the object thet generated the event.
         Object node = event.getSource(); 
@@ -101,10 +102,29 @@ public class PageGameController implements Initializable {
             lblScore.setText(playerScore.toString());
             setQuery();
         }else{
-            String life = lblLife.getText();
-            life.substring(0, life.length()-1);
-            lblLife.setText("ERROR");
-            System.out.println(life);
+            String string = lblLife.getText();  
+            //creating a constructor of StringBuffer class  
+            StringBuffer sb = new StringBuffer(string);  
+            //invoking the method  
+            sb.deleteCharAt(sb.length()-1);
+            lblLife.setText(sb.toString());
+            
+            if(lblLife.getText().length() == 0){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaquizapp/ui/PageRank.fxml"));
+                Parent root = loader.load();
+                //get the controller
+                PageRankController rank = loader.getController();
+                //set data in the controller
+                String name = lblName.getText();
+                Integer score = Integer.parseInt(lblScore.getText());
+                rank.setPlayerRank(name,score);
+
+                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
         }
+        
     }
 }

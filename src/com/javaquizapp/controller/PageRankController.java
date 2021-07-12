@@ -65,7 +65,7 @@ public class PageRankController implements Initializable {
         }else if(score <= 15){
             lblMessage.setText("Nem precisa mais pesquisar no Google!");
         }else if(score > 20){
-            lblMessage.setText("Mater!");
+            lblMessage.setText("Master!");
         }
         
         lblRankScore.setText(score.toString());

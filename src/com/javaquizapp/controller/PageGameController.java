@@ -62,6 +62,13 @@ public class PageGameController implements Initializable {
             {"Qual é o sistema mais ultilizado em dispositivos móveis?","Android","Apple","Symbian","iOS"},
             {"HTML é uma linguagem de?","Marcaçâo","Programação","Ostentação","Estilização"},
             {"A abreviação correta para Cascade Style Sheets é?", "CSS","CAS","CSY","SSC"},
+            /*
+            {"Qual é o retorno da expressão: (22>202)?'Banana':'Maçã'  ?", "Maçã","Banana","22","202"},
+            {"Complete a sequência logica para fazer um bolo: Ovos, Leite, Farinha, Misturar e?", "Assar","Comer","Cheirar","Cortar"},
+            {"O simbolo da linguagem Java é:", "Uma Xicara","Um passaro","Um avião","Um livro"},
+            {"A sigla para Scalable Vector Graphics é?", "SVG","VGS","VHS","GVS"},
+            {"Se com 1 litro de gasolina meu carro anda 13km com 2 litros andará:", "26000metros","22000metros","20000metros","13000metros"},
+            */
         };
         //random query selection
         Random rand = new Random();

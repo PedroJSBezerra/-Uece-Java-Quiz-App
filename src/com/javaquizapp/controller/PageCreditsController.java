@@ -34,6 +34,7 @@ public class PageCreditsController implements Initializable {
         // TODO
     }    
 
+    @FXML
     public void switchToPageRank(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/com/javaquizapp/ui/PageRank.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -55,5 +56,4 @@ public class PageCreditsController implements Initializable {
             stage.close();
         }
     }
-    
 }

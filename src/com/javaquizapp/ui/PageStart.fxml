@@ -9,15 +9,15 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageStartController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageStartController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
             <VBox styleClass="centerVbox">
                <children>
-                  <TextFlow styleClass="centerTextFlow" VBox.vgrow="ALWAYS">
+                  <TextFlow prefHeight="283.0" prefWidth="340.0" styleClass="centerTextFlow" VBox.vgrow="ALWAYS">
                      <children>
-                        <Text styleClass="centerTextFlowText" text="Regras do game:&#10;&#10;1- Neste game voçê irá começar com 7 vidas.&#10;2- Para cada erro voçê perderá 1 vida.&#10;3- Cada acerto vale 1 ponto e levará a proxima pergunta.&#10;4- O game termina se as vidas acabarem ou as perguntas acabarem.&#10;5- Ao fim do game seu nome e pontuaçâo são registrados no ranking da categoria escolhida." />
+                        <Text styleClass="centerTextFlowText" text="Regras do game:&#10;&#10;1- Neste game voçê irá começar com 7 vidas.&#10;2- Para cada erro voçê perderá 1 vida.&#10;3- Cada acerto vale 1 ponto e levará a proxima pergunta.&#10;4- O game só termina se as vidas acabarem.&#10;5- Ao fim do game vocé verá sua pontuação e uma mensagem" />
                      </children>
                   </TextFlow>
                   <HBox styleClass="centerHbox">

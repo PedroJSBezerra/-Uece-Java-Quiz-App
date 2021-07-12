@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageCreditsController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageCreditsController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -32,9 +33,9 @@
             </HBox>
          </bottom>
          <center>
-            <VBox minWidth="360.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox spacing="65.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextFlow lineSpacing="10.0" prefHeight="125.0" prefWidth="320.0" textAlignment="CENTER">
+                  <TextFlow lineSpacing="10.0" textAlignment="CENTER">
                      <children>
                         <Text fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Desenvolvido durante o Projeto piloto &#10;QualificaMais doGoverno Federal em &#10;parceria com a &#10;Universidade Estadual do Ceará(UECE)." wrappingWidth="312.828125">
                            <font>
@@ -43,16 +44,16 @@
                         </Text>
                      </children>
                   </TextFlow>
-                  <TextFlow layoutX="30.0" layoutY="30.0" lineSpacing="10.0" prefHeight="13.0" prefWidth="320.0" textAlignment="CENTER">
+                  <TextFlow layoutX="30.0" layoutY="30.0" lineSpacing="10.0" textAlignment="CENTER">
                      <children>
-                        <Text fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PedroJSDev&#10;SOCIAL LINKS" wrappingWidth="225.5419921875">
+                        <Text fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by PedroJSDev&#10;SOCIAL LINKS" wrappingWidth="208.265625">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Text>
                      </children>
                   </TextFlow>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                  <HBox alignment="CENTER" spacing="80.0">
                      <children>
                         <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -71,15 +72,25 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <TextFlow layoutX="30.0" layoutY="176.0" lineSpacing="10.0" prefHeight="151.0" prefWidth="320.0">
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="294.0" spacing="40.0">
                      <children>
-                        <Text fill="#f6f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributors:&#10;Pro" wrappingWidth="113.8076171875">
+                        <Hyperlink text="GitHub" textFill="#f6f6f6">
                            <font>
                               <Font size="18.0" />
                            </font>
-                        </Text>
+                        </Hyperlink>
+                        <Hyperlink layoutX="141.0" layoutY="27.0" text="LinkedIn" textFill="#f6f6f6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Hyperlink>
+                        <Hyperlink layoutX="190.0" layoutY="27.0" text="CodePen" textFill="#f6f6f6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Hyperlink>
                      </children>
-                  </TextFlow>
+                  </HBox>
                </children>
                <BorderPane.margin>
                   <Insets top="20.0" />

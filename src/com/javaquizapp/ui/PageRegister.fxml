@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageRegisterController">
+<AnchorPane fx:id="anchorPane" styleClass="anchorPane" stylesheets="@StyleGeneral.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaquizapp.controller.PageRegisterController">
    <children>
       <BorderPane styleClass="borderpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <HBox styleClass="topHbox">
                <children>
-                  <Label styleClass="topLabel" text="Cadastro" />
+                  <Label prefWidth="118.0" styleClass="topLabel" text="Cadastro" />
                </children>
             </HBox>
          </top>
@@ -44,7 +44,7 @@
                   </VBox>
                   <VBox styleClass="hBoxRadioGroup" VBox.vgrow="ALWAYS">
                      <children>
-                        <RadioButton fx:id="news" mnemonicParsing="false" selected="true" styleClass="radio" text="Atualidades">
+                        <RadioButton fx:id="news" mnemonicParsing="false" selected="true" styleClass="radio" text="Geral">
                            <toggleGroup>
                               <ToggleGroup fx:id="categoryGroup" />
                            </toggleGroup>

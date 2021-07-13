@@ -27,7 +27,7 @@
          <bottom>
             <HBox styleClass="bottomHbox">
                <children>
-                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#switchToPageRank" styleClass="buttonNav" text="Ranking" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonRank" mnemonicParsing="false" onAction="#switchToPageRank" styleClass="buttonNav" text="Voltar" HBox.hgrow="ALWAYS" />
                   <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#logout" styleClass="buttonNav" text="Sair" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
@@ -57,17 +57,17 @@
                      <children>
                         <ImageView fitHeight="60.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/githubicon.png" />
+                              <Image url="@../../../icons/githubicon.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/linkedinicon.png" />
+                              <Image url="@../../../icons/linkedinicon.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="90.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/codepenicon.png" />
+                              <Image url="@../../../icons/codepenicon.png" />
                            </image>
                         </ImageView>
                      </children>

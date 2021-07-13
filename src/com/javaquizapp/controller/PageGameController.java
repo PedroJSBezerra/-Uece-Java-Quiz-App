@@ -107,7 +107,7 @@ public class PageGameController implements Initializable {
         if(option == answer){
             Integer playerScore = Integer.parseInt(lblScore.getText());
             playerScore++;
-            AudioClip Correct = new AudioClip(getClass().getResource("/com/javaquizapp/ui/sounds/Correct.wav").toExternalForm());
+            AudioClip Correct = new AudioClip(getClass().getResource("/sounds/Correct.wav").toExternalForm());
             Correct.stop();
             Correct.play();
             lblScore.setText(playerScore.toString());
@@ -120,7 +120,7 @@ public class PageGameController implements Initializable {
             sb.deleteCharAt(sb.length()-1);
             lblLife.setText(sb.toString());
             
-            AudioClip Error = new AudioClip(getClass().getResource("/com/javaquizapp/ui/sounds/Error.wav").toExternalForm());
+            AudioClip Error = new AudioClip(getClass().getResource("/sounds/Error.wav").toExternalForm());
             Error.stop();
             Error.play();
             

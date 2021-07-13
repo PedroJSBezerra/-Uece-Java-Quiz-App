@@ -75,7 +75,7 @@ public class PageRegisterController implements Initializable {
 
     @FXML   
     public void strangerThings(ActionEvent event){
-        AudioClip stranger = new AudioClip(getClass().getResource("/com/javaquizapp/ui/sounds/SoundStranger.mp3").toExternalForm());
+        AudioClip stranger = new AudioClip(getClass().getResource("/sounds/SoundStranger.mp3").toExternalForm());
         stranger.stop();
         stranger.play();
     }

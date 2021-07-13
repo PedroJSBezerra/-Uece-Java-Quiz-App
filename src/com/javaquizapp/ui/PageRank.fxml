@@ -35,14 +35,14 @@
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </padding>
                <children>
-                  <Label fx:id="lblRankScore" layoutX="162.0" layoutY="266.0" text="Pontuação" textFill="#f6f6f6">
+                  <Label fx:id="lblRankScore" layoutX="162.0" layoutY="266.0" text=" " textFill="#f6f6f6">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
                   <TextFlow prefHeight="317.0" prefWidth="300.0" textAlignment="CENTER">
                      <children>
-                        <Text fx:id="lblMessage" fill="#f6f6f6" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="55.341796875">
+                        <Text fx:id="lblMessage" fill="#f6f6f6" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogue novamente para ver sua pontuação..." textAlignment="CENTER" wrappingWidth="55.341796875">
                            <font>
                               <Font size="30.0" />
                            </font>

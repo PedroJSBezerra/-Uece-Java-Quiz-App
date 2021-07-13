@@ -56,7 +56,6 @@ public class PageRankController implements Initializable {
         stage.show();
     }
     void setPlayerRank(String name, Integer score) {
-        System.out.println("Nome: "+name+"Score :"+ score);
         
         if(score <= 5){
             lblMessage.setText("Você precisa se esforçar mais.");

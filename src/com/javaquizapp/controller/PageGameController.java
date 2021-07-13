@@ -13,6 +13,7 @@ import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -106,6 +107,9 @@ public class PageGameController implements Initializable {
         if(option == answer){
             Integer playerScore = Integer.parseInt(lblScore.getText());
             playerScore++;
+            AudioClip Correct = new AudioClip(getClass().getResource("/com/javaquizapp/ui/sounds/Correct.wav").toExternalForm());
+            Correct.stop();
+            Correct.play();
             lblScore.setText(playerScore.toString());
             setQuery();
         }else{
@@ -115,6 +119,10 @@ public class PageGameController implements Initializable {
             //invoking the method  
             sb.deleteCharAt(sb.length()-1);
             lblLife.setText(sb.toString());
+            
+            AudioClip Error = new AudioClip(getClass().getResource("/com/javaquizapp/ui/sounds/Error.wav").toExternalForm());
+            Error.stop();
+            Error.play();
             
             if(lblLife.getText().length() == 0){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaquizapp/ui/PageRank.fxml"));
